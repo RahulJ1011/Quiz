@@ -1,10 +1,10 @@
 const bcrypt = require('bcrypt');
-const Auth = require("../model/auth"); 
+const Auth = require("../model/user"); 
 const register = async (req, res) => {
   try {
-    const { userName, password } = req.body;
+    const { userName, password,email } = req.body;
 
-    const isUser = await Auth.findOne({ userName });
+    const isUser = await Auth.findOne({ email });
     if (isUser) {
       return res.status(400).json({ msg: "User already exists" });
     }
