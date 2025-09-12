@@ -1,0 +1,102 @@
+/* Background setup */
+.login-container {
+   background: url("../assests/login bg") no-repeat center center/cover; 
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+/* Glassmorphism login box */
+.login-box {
+  background: rgba(20, 0, 0, 0.8);
+    border: 2px solid rgba(255, 0, 0, 0.6);  
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.5); 
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+}
+
+/* Title */
+.login-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ff1a1a;
+  text-shadow: 0 0 15px #ff0000;
+  letter-spacing: 2px;
+}
+
+/* Input styling */
+.input-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #ffcccc;
+}
+
+.input-group input {
+  width: 93%;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ff1a1a;
+  background: rgba(30, 0, 0, 0.8);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  align-items: center;
+}
+
+.input-group input:focus {
+  border-color: #ff3333;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+/* Button */
+.login-btn {
+  width: 90%;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff1a1a, #990000);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #ff3333, #b30000);
+  transform: scale(1.05);
+}
+
+/* Responsive for 1440px */
+@media (min-width: 1440px) {
+  .login-box {
+    width: 450px;
+    padding: 3.5rem 3rem;
+  }
+  .login-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Responsive for 1024px */
+@media (max-width: 1024px) {
+  .login-box {
+    width: 450px;
+    padding: 2.5rem 2rem;
+  }
+  .login-title {
+    font-size: 2rem;
+  }
+}
