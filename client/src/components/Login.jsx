@@ -21,9 +21,9 @@ const Login = () => {
                                 placeholder="Enter your password"
                             />
                         </div>
-                       <Link to="/fillup"><button type="submit" className="login-btn">
+                       <button type="submit" className="login-btn">
                             Sign In
-                        </button></Link>
+                        </button>
                     </form>
                 </div>
             </div>
