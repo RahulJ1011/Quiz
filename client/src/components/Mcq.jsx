@@ -23,6 +23,7 @@ const Mcq = () => {
   const [answer, setAnswer] = useState("");
   const [showInput, setShowInput] = useState(false);
   const [remainingTime, setRemainingTime] = useState(20);
+ const [countdown, setCountdown] = useState(null);
 
   useEffect(() => {
     setShowInput(false);
@@ -49,6 +50,7 @@ const Mcq = () => {
               return prevTime - 1;
             });
           }, 1000);
+           setCountdown(countdown);
 
           return prev;
         }
@@ -59,15 +61,46 @@ const Mcq = () => {
       clearInterval(imageInterval);
     };
   }, [questionIndex]);
+    const handleNext = async () => {
+    // clear countdown if still running
+    const currentQuestion = questions[questionIndex];
+    if (countdown) {
+      clearInterval(countdown);
+      setCountdown(null);
+    }
+    try {
+      await fetch("http://localhost:5000/api/mcq-answers", {  // change URL to your backend API
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          question: currentQuestion.text,
+          userAnswer: answer,
+          correctAnswer: currentQuestion.correctAnswer,
+        }),
+      });
+    } catch (error) {
+      console.error("Failed to save answer:", error);
+      alert("eror to fetch");
+    }
 
-  const handleNext = () => {
     if (questionIndex + 1 < questions.length) {
       setQuestionIndex(questionIndex + 1);
-      setAnswer("");
+      setAnswer("");  // reset answer input for next question
     } else {
       alert("Quiz Finished 🎉");
     }
   };
+
+  // const handleNext = () => {
+  //   if (questionIndex + 1 < questions.length) {
+  //     setQuestionIndex(questionIndex + 1);
+  //     setAnswer("");
+  //   } else {
+  //     alert("Quiz Finished 🎉");
+  //   }
+  // };
 
   return (
     <div style={{ textAlign: "center" }}>
