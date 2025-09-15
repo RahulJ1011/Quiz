@@ -1,10 +1,33 @@
 import React, { useState, useEffect } from "react";
-import img1 from "../assests/time.jpg";
-import img2 from "../assests/bgquiz.jpg";
-import img3 from "../assests/about.jpg";
-import img4 from "../assests/bg.jpg";
+import { useNavigate } from "react-router-dom";
+import img1 from "../assests/QM1.1.jpg";
+import img2 from "../assests/QM1.2.jpg";
+import img3 from "../assests/QM1.3.jpg";
+import img4 from "../assests/ans.jpg";
+import img5 from "../assests/QM2.1.png";
+import img6 from "../assests/QM2.2.jpg";
+import img7 from "../assests/QM2.3.jpg";
+import img8 from "../assests/QM3.1.jpg";
+import img9 from "../assests/QM3.2.jpg";
+import img10 from "../assests/QM3.3.png";
+import img11 from "../assests/QM4.1.jpg";
+import img12 from "../assests/QM4.2.jpg";
+import img13 from "../assests/QM5.1.jpg";
+import img14 from "../assests/QM5.2.jpg";
+import img15 from "../assests/QM5.3.webp";
+import img16 from "../assests/QM6.1.jpg";
+import img17 from "../assests/QM6.2.jpg";
+import img18 from "../assests/QM6.3.jpg";
+import img19 from "../assests/QM7.1.jpg";
+import img20 from "../assests/QM7.2.jpg";
+import img21 from "../assests/QM7.3.jpg";
+import img22 from "../assests/QM7.4.jpg";
+import img23 from "../assests/QM8.1.jpg";
+import img24 from "../assests/QM8.2.jpg";
+import img25 from "../assests/QM8.3.jpg";
 import '../styles/Mcq.css';
 const Mcq = () => {
+    const navigate = useNavigate();
   const questions = [
     {
       text: "What is shown in the images?",
@@ -13,9 +36,39 @@ const Mcq = () => {
     },
     {
       text: "Guess the theme from these images?",
-      images: [img2, img1, img4, img3],
+      images: [img5, img6, img7, img4],
       correctAnswer: "quiz",
     },
+    {
+      text: "Guess the theme from these images?",
+      images: [img8, img9, img10, img4],
+      correctAnswer: "quiz",
+    },
+    {
+      text: "Guess the theme from these images?",
+      images: [ img11,img12, img4],
+      correctAnswer: "quiz",
+    },
+    {
+      text: "Guess the theme from these images?",
+      images: [img13, img14,img15, img4],
+      correctAnswer: "quiz",
+    },
+    {
+      text: "Guess the theme from these images?",
+      images: [img16, img17,img18, img4],
+      correctAnswer: "quiz",
+    },
+    {
+      text: "Guess the theme from these images?",
+      images: [img19, img20,img21,img22, img4],
+      correctAnswer: "quiz",
+    },
+    {
+      text: "Guess the theme from these images?",
+      images: [img23, img24,img25,img4],
+      correctAnswer: "quiz",
+    }
   ];
 
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -90,6 +143,7 @@ const Mcq = () => {
       setAnswer("");  // reset answer input for next question
     } else {
       alert("Quiz Finished 🎉");
+      navigate("/thankyou");
     }
   };
 

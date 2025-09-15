@@ -8,7 +8,20 @@
   justify-content: center;
   align-items: center;
 }
-
+.timer-box {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff4444; /* red theme */
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 16px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px #ff0000;
+  
+  margin: 15px auto;
+  width:100px;
+  height: 30px;
+  align-items: center;
+}
 .form-box {
   background: rgba(30, 0, 0, 0.8);
   padding: 50px;
@@ -25,7 +38,7 @@
 }
 
 .form-box input {
-  width: 100%;
+  width: 150px;
   padding: 14px;
   margin-bottom: 25px;
   border: 1px solid #aaa;
@@ -51,7 +64,7 @@
 /* ===========================
    Laptop View ≤ 1440px
 =========================== */
-@media (max-width: 1440px) {
+/* @media (max-width: 1440px) {
   .form-box {
     width: 450px;
     padding: 45px;
@@ -66,11 +79,43 @@
     font-size: 1.1rem;
     padding: 12px;
   }
+} */
+ @media (min-width: 1025px) and (max-width: 1440px) {
+  .form-box {
+    width: 450px;
+    padding: 45px;
+  }
+
+  .form-box h2 {
+    font-size: 1.75rem;
+  }
+  
+  .form-box input,
+  .form-box button {
+    font-size: 1.1rem;
+    padding: 12px;
+  }
 }
 
 /* ===========================
    Laptop View ≤ 1024px
 =========================== */
+/* @media (max-width: 1024px) {
+  .form-box {
+    width: 350px;
+    padding: 30px;
+  }
+
+  .form-box h2 {
+    font-size: 1.4rem;
+  }
+
+  .form-box input,
+  .form-box button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+} */
 @media (max-width: 1024px) {
   .form-box {
     width: 350px;
