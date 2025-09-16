@@ -1,12 +1,28 @@
 /* Background setup */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+
+
+
+
 .login-container {
-   background: url("../assests/login bg") no-repeat center center/cover; 
-  min-height: 100vh;
+    
+   
+  /* min-height: 100vh; */
+   height: 100vh;   /* full screen height */
+  width: 100vw; 
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Poppins", sans-serif;
   color: #fff;
+   
 }
 
 /* Glassmorphism login box */

@@ -143,7 +143,7 @@ const Mcq = () => {
       setAnswer("");  // reset answer input for next question
     } else {
       alert("Quiz Finished 🎉");
-      navigate("/thankyou");
+      navigate("/thankyou",{replace:true});
     }
   };
 

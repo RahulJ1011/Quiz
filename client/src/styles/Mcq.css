@@ -15,8 +15,10 @@ div {
 h2 {
   font-family: 'Benguiat', 'Times New Roman', serif; /* Stranger Things font style */
   font-size: 2.5rem;
-  color: #e50914;
-  text-shadow: 0 0 8px #e50914, 0 0 16px #ff0000;
+  /* color: #cf111a; */
+  color:#e50914;
+  color:#f1f1f1;
+  text-shadow: 0 0 8px #fa020f, 0 0 16px #fd0303;
   margin-bottom: 10px;
 }
 
@@ -52,7 +54,7 @@ strong {
 /* Input field */
 input[type="text"] {
   padding: 10px;
-  width: 350px;
+  width: 250px;
   border: 2px solid #e50914;
   border-radius: 5px;
   background: #111;

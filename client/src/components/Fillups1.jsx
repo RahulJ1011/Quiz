@@ -67,8 +67,9 @@ function Fillups1() {
 
   return (
     <>
-      <div className="timer-box">{formatTime(timeLeft)}</div>
+       <div className="timer-box">{formatTime(timeLeft)}</div>
       <div className="fillups">
+       
         <div style={{ display: "flex", justifyContent: "flex-start" }}>
           <ReactPlayer
             src={viediosrc}

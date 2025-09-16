@@ -20,6 +20,7 @@ function App() {
         <Route path="/fillup1" element={<Fillup1/>}/>
         <Route path="/fillup3" element={<Fillup3/>}/>
         <Route path="/thankyou" element={<Thankyou/>}/>
+        <Route path="/rules" element={<Rules/>}/>
 
       </Routes>
       

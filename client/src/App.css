@@ -1,0 +1,5 @@
+.App{
+    background: url("./assests/login bg") no-repeat center center/cover;
+     height: 100vh;   /* full height */
+  width: 100vw;  
+}

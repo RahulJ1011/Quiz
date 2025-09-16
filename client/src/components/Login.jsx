@@ -3,7 +3,7 @@ import "../styles/Login.css";
 import { Link } from 'react-router-dom';
 const Login = () => {
     return (
-        <div>
+        <>
             <div className="login-container">
                 <div className="login-box">
                     <h1 className="login-title">LOGIN</h1>
@@ -27,7 +27,7 @@ const Login = () => {
                     </form>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
