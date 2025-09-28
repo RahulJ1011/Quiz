@@ -28,9 +28,9 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
   try {
-    const { userName, password } = req.body;
+    const { userName, password,email } = req.body;
 
-    const isUser = await Auth.findOne({ userName });
+    const isUser = await Auth.findOne({ email });
     if (!isUser) {
       return res.status(404).json({ msg: "User not found" });
     }
