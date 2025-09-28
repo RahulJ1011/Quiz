@@ -7,6 +7,7 @@ import Fillup1 from './components/Fillups1';
 import Fillup3 from './components/Fillups3';
 import { Routes, Route } from "react-router-dom";
 import Thankyou from './components/Thankyou';
+import Rules from './components/Rules';
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
